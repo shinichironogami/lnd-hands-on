@@ -5,12 +5,12 @@ This text is for lnd library hands on. We use lnd with bitcoind.
 - ビットコインのLayer2技術。オンチェーンではなくオフチェーンで送金し、ビットコインのスケーラビリティ問題を解決する。
 
 ## How Lightning Network work?
-1. AさんとBさんでチャネルを開く
+- AさんとBさんでチャネルを開く
   - AさんとBさんでマルチシグのアドレスを作る
   - Aさんがそのアドレスに送金（デポジット）する（funding transactionを生成する）
-2. BさんがAさんにインボイス（請求書）を発行する
-3. AさんがインボイスをもとにBさんに送金する
-4. チャネルをクローズする（closing transactionを生成する）
+- BさんがAさんにインボイス（請求書）を発行する
+- AさんがインボイスをもとにBさんに送金する
+- チャネルをクローズする（closing transactionを生成する）
   - チャネルでのやりとりをもとに、マルチシグアドレスからAさん、Bさんに送金される
 
 ## Installing bitcoind

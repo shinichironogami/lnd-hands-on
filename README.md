@@ -7,10 +7,10 @@ This text is for lnd library hands on. We use lnd with bitcoind.
 ## How Lightning Network work?
 - AさんとBさんでチャネルを開く
   - AさんとBさんでマルチシグのアドレスを作る
-  - Aさんがそのアドレスに送金（デポジット）する（funding transactionを生成する）
+- Aさんがマルチシグのアドレスに送金（デポジット）する
 - BさんがAさんにインボイス（請求書）を発行する
 - AさんがインボイスをもとにBさんに送金する
-- チャネルをクローズする（closing transactionを生成する）
+- チャネルをクローズし、closing transactionを生成する
   - チャネルでのやりとりをもとに、マルチシグアドレスからAさん、Bさんに送金される
 
 ## Installing bitcoind

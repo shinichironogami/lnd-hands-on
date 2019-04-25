@@ -85,6 +85,7 @@ alias lnd-bob="/home/ap/go/bin/lnd --bitcoin.testnet --lnddir=/home/ap/.lnd/user
 ```
 
 ```
+# ~/.lnd/user/alice/lnd.conf
 [Application Options]
 debuglevel=info
 maxpendingchannels=10
@@ -113,6 +114,7 @@ bitcoind.zmqpubrawtx=tcp://127.0.0.1:28333
 ```
 
 ```
+# ~/.lnd/user/bob/lnd.conf
 [Application Options]
 debuglevel=info
 maxpendingchannels=10

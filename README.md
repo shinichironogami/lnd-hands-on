@@ -78,6 +78,8 @@ lnd-alice
 lncli-alice create
 Do you have an existing cipher seed mnemonic you want to use? (Enter y/n): n
 lncli-alice newaddress np2wkh # failed until bitcoind sync is finished
+lncli-alice connect 025db8b8c4a749313b6e709b01307a407485ca3ef0a7a610f22e977ae54ae7e88b@127.0.0.1:10012
+lncli-alice openchannel 025db8b8c4a749313b6e709b01307a407485ca3ef0a7a610f22e977ae54ae7e88b
 ```
 - ~/.bash_profile
 ```

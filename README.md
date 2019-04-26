@@ -148,11 +148,11 @@ bitcoind.zmqpubrawblock=tcp://127.0.0.1:28332
 bitcoind.zmqpubrawtx=tcp://127.0.0.1:28333
 ```
 
+# Open channel
 ```
 lncli-alice connect 025db8b8c4a749313b6e709b01307a407485ca3ef0a7a610f22e977ae54ae7e88b@127.0.0.1
 lncli-alice listpeers
 lncli-alice openchannel 025db8b8c4a749313b6e709b01307a407485ca3ef0a7a610f22e977ae54ae7e88b
-
 ```
 
 cf. https://dev.lightning.community/tutorial/01-lncli/index.html

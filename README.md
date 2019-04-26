@@ -1,5 +1,8 @@
 # lnd-hands-on
-This text is for lnd library hands on. We use lnd with bitcoind.  
+- Content
+  - bitcoindとlndを使って、テストネットでノード間の送金を行う
+- Goal
+  - ライトニングノードを実際に動かしてみることで、動作原理を学ぶ
 
 ## What is Lightning Network?
 - ビットコインのLayer2技術。オンチェーンではなくオフチェーンで送金し、ビットコインのスケーラビリティ問題を解決する。
@@ -76,6 +79,7 @@ lncli-alice create
 Do you have an existing cipher seed mnemonic you want to use? (Enter y/n): n
 lncli-alice newaddress np2wkh # failed until bitcoind sync is finished
 ```
+- ~/.bash_profile
 ```
 export PATH=$PATH:/home/username/go/bin:/usr/local/go/bin
 alias lncli-alice="lncli --lnddir /home/ap/.lnd/user/alice --rpcserver=localhost:10001 --no-macaroons"
@@ -84,8 +88,8 @@ alias lnd-alice="/home/ap/go/bin/lnd --bitcoin.testnet --lnddir=/home/ap/.lnd/us
 alias lnd-bob="/home/ap/go/bin/lnd --bitcoin.testnet --lnddir=/home/ap/.lnd/user/bob"
 ```
 
+- ~/.lnd/user/alice/lnd.conf
 ```
-# ~/.lnd/user/alice/lnd.conf
 [Application Options]
 debuglevel=info
 maxpendingchannels=10
@@ -113,8 +117,8 @@ bitcoind.zmqpubrawblock=tcp://127.0.0.1:28332
 bitcoind.zmqpubrawtx=tcp://127.0.0.1:28333
 ```
 
+- ~/.lnd/user/bob/lnd.conf
 ```
-# ~/.lnd/user/bob/lnd.conf
 [Application Options]
 debuglevel=info
 maxpendingchannels=10
@@ -141,4 +145,12 @@ bitcoind.rpcpass=password
 bitcoind.zmqpubrawblock=tcp://127.0.0.1:28332
 bitcoind.zmqpubrawtx=tcp://127.0.0.1:28333
 ```
+
+```
+lncli-alice connect 025db8b8c4a749313b6e709b01307a407485ca3ef0a7a610f22e977ae54ae7e88b@127.0.0.1
+lncli-alice listpeers
+lncli-alice openchannel 025db8b8c4a749313b6e709b01307a407485ca3ef0a7a610f22e977ae54ae7e88b
+
+```
+
 cf. https://dev.lightning.community/tutorial/01-lncli/index.html

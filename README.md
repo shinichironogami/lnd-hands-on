@@ -85,10 +85,10 @@ lncli-alice openchannel 025db8b8c4a749313b6e709b01307a407485ca3ef0a7a610f22e977a
 - ~/.bash_profile
 ```
 export PATH=$PATH:/home/username/go/bin:/usr/local/go/bin
-alias lncli-alice="lncli --lnddir /home/ap/.lnd/user/alice --rpcserver=localhost:10001 --no-macaroons"
-alias lncli-bob="lncli --lnddir /home/ap/.lnd/user/bob --rpcserver=localhost:10002 --no-macaroons"
-alias lnd-alice="/home/ap/go/bin/lnd --bitcoin.testnet --lnddir=/home/ap/.lnd/user/alice"
-alias lnd-bob="/home/ap/go/bin/lnd --bitcoin.testnet --lnddir=/home/ap/.lnd/user/bob"
+alias lncli-alice="lncli --lnddir /home/username/.lnd/user/alice --rpcserver=localhost:10001 --no-macaroons"
+alias lncli-bob="lncli --lnddir /home/username/.lnd/user/bob --rpcserver=localhost:10002 --no-macaroons"
+alias lnd-alice="/home/username/go/bin/lnd --bitcoin.testnet --lnddir=/home/ap/.lnd/user/alice"
+alias lnd-bob="/home/username/go/bin/lnd --bitcoin.testnet --lnddir=/home/ap/.lnd/user/bob"
 ```
 
 - ~/.lnd/user/alice/lnd.conf
